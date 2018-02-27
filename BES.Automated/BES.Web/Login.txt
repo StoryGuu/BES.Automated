@@ -1,0 +1,13 @@
+*** Settings ***
+Resource          PageKeyword/CommonKeyword.txt
+
+*** Test Cases ***
+[S-01] Login
+    Open Browser    ${BESUrl}    ${ar_BROWSER}
+    Web Input Text    ${txtLoginId}    bmcbes
+    Web Input Text    ${txtPassword}    bmcbes
+    Web Click Element    ${btnLogin}
+    Web Click Element    ${btnConfirmHospital}
+    Web Select Frame    ${frameHead}
+    Wait Until Element Is Visible    ${lblPt.Registration}    10
+    Close Browser

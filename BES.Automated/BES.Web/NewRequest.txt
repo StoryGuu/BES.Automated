@@ -1,0 +1,6 @@
+*** Settings ***
+Resource          PageKeyword/CommonKeyword.txt
+
+*** Test Cases ***
+[S-01] Search Patient
+    Login

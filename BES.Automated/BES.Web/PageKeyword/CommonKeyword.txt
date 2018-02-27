@@ -1,0 +1,29 @@
+*** Settings ***
+Library           Selenium2Library
+Resource          ../PageRepositories/CommonRepository.txt
+
+*** Keywords ***
+Web Input Text
+    [Arguments]    ${locator}    ${text}    ${timeout}=10
+    Wait Until Element Is Visible    ${locator}    ${timeout}
+    Input Text    ${locator}    ${text}
+
+Web Click Element
+    [Arguments]    ${locator}    ${timeout}=10
+    Wait Until Element Is Visible    ${locator}    ${timeout}
+    Click Element    ${locator}
+
+Web Select Frame
+    [Arguments]    ${locator}    ${timeout}=10
+    Wait Until Element Is Visible    ${locator}    ${timeout}
+    Select Frame    ${locator}
+
+Login
+    Open Browser    ${BESUrl}    ${ar_BROWSER}
+    Web Input Text    ${txtLoginId}    bmcbes
+    Web Input Text    ${txtPassword}    bmcbes
+    Web Click Element    ${btnLogin}
+    Web Click Element    ${btnConfirmHospital}
+    Web Select Frame    ${frameHead}
+    Wait Until Element Is Visible    ${lblPt.Registration}    10
+    Close Browser

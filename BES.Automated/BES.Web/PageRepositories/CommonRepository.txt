@@ -1,0 +1,9 @@
+*** Variables ***
+${BESUrl}         http://203.107.236.229/bes-uat/frmLogin.aspx
+${txtLoginId}     xpath=//*[@id="txtUserName"]
+${txtPassword}    xpath=//*[@id="txtPassword"]
+${btnLogin}       xpath=//*[@id="btnLogin"]
+${lblPt.Registration}    xpath=//*[@id="headMenu01"]
+${btnConfirmHospital}    xpath=//*[@id="btnOK"]
+${frameMain}      xpath=//*[@id="frameSetMain"]
+${frameHead}      xpath=//*[@id="fraHead"]
