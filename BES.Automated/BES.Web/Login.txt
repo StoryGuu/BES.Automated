@@ -6,8 +6,8 @@ Resource          PageKeyword/CommonKeyword.txt
     Open Browser    ${BESUrl}    ${ar_BROWSER}
     Web Input Text    ${txtLoginId}    bmcbes
     Web Input Text    ${txtPassword}    bmcbes
-    Web Click Element    ${btnLogin}
-    Web Click Element    ${btnConfirmHospital}
+    กดปุ่ม    ${btnLogin}
+    กดปุ่ม    ${btnConfirmHospital}
     Web Select Frame    ${frameHead}
     Wait Until Element Is Visible    ${lblPt.Registration}    10
     [Teardown]    Close Browser

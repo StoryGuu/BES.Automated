@@ -8,7 +8,7 @@ Web Input Text
     Wait Until Element Is Visible    ${locator}    ${timeout}
     Input Text    ${locator}    ${text}
 
-Web Click Element
+กดปุ่ม
     [Arguments]    ${locator}    ${timeout}=10
     Wait Until Element Is Visible    ${locator}    ${timeout}
     Click Element    ${locator}
@@ -21,8 +21,8 @@ Web Select Frame
 Login
     Web Input Text    ${txtLoginId}    bmcbes
     Web Input Text    ${txtPassword}    bmcbes
-    Web Click Element    ${btnLogin}
-    Web Click Element    ${btnConfirmHospital}
+    กดปุ่ม    ${btnLogin}
+    กดปุ่ม    ${btnConfirmHospital}
     Web Select Frame    ${frameHead}
     Wait Until Element Is Visible    ${lblPt.Registration}    10
     Capture Page Screenshot

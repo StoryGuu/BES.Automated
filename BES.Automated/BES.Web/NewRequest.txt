@@ -13,7 +13,7 @@ Resource          PageKeyword/NewRequestKeyword.txt
     Login
     Go To New Request
     Web Input Text    ${txtIdCard}    123456
-    Web Click Element    ${btnSearchPt}
+    กดปุ่ม    ${btnSearchPt}
     Wait Until Element Is Visible    ${tableSearchPtResult}
     Capture Page Screenshot
     [Teardown]    Close Browser
@@ -22,7 +22,7 @@ Resource          PageKeyword/NewRequestKeyword.txt
     Web Open BES
     Login
     Go To New Request
-    Web Click Element    ${btnSAVE}
+    กดปุ่ม    ${btnSAVE}
     Alert Should Be Present    ยืนยันการบันทึกข้อมูล    action=ACCEPT    timeout=10
     Alert Should Be Present    บันทึกข้อมูลเรียบร้อย    action=ACCEPT    timeout=10
     Capture Page Screenshot

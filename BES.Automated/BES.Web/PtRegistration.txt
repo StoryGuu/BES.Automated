@@ -13,7 +13,7 @@ Resource          PageKeyword/PtRegistrationKeyword.txt
     Login
     Go To PtRegistion
     Web Input Text    ${txtSearchIDCard}    123456
-    Web Click Element    ${btnSearchPatient}
+    กดปุ่ม    ${btnSearchPatient}
     Wait Until Element Is Visible    ${tableSearchPatientResult}    10
     Capture Page Screenshot
     [Teardown]    Close Browser
@@ -22,7 +22,7 @@ Resource          PageKeyword/PtRegistrationKeyword.txt
     Web Open BES
     Login
     Go To PtRegistion
-    Web Click Element    ${btnSearchPatient}
+    กดปุ่ม    ${btnSearchPatient}
     Alert Should Be Present    กรุณาระบุเงื่อนไขการค้นหา    ACCEPT    10
     Capture Page Screenshot
     [Teardown]    Close Browser

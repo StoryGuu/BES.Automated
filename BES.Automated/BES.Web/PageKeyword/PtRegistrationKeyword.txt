@@ -4,7 +4,7 @@ Resource          ../PageRepositories/PtRegistrationRepository.txt
 
 *** Keywords ***
 Go To PtRegistion
-    Web Click Element    ${lblPtRegistion}
+    กดปุ่ม    ${lblPtRegistion}
     Unselect Frame
     Web Select Frame    ${frameMain}
     Wait Until Element Is Visible    ${btnSearchPatient}    10
