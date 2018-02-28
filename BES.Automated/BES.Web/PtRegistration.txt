@@ -1,0 +1,28 @@
+*** Settings ***
+Resource          PageKeyword/PtRegistrationKeyword.txt
+
+*** Test Cases ***
+[S-01] Index
+    Web Open BES
+    Login
+    Go To PtRegistion
+    [Teardown]    Close Browser
+
+[S-01] Seach Pt Detail
+    Web Open BES
+    Login
+    Go To PtRegistion
+    Web Input Text    ${txtSearchIDCard}    123456
+    Web Click Element    ${btnSearchPatient}
+    Wait Until Element Is Visible    ${tableSearchPatientResult}    10
+    Capture Page Screenshot
+    [Teardown]    Close Browser
+
+[F-01] Search data with empty input
+    Web Open BES
+    Login
+    Go To PtRegistion
+    Web Click Element    ${btnSearchPatient}
+    Alert Should Be Present    กรุณาระบุเงื่อนไขการค้นหา    ACCEPT    10
+    Capture Page Screenshot
+    [Teardown]    Close Browser

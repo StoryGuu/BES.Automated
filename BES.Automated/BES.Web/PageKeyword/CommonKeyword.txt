@@ -19,11 +19,15 @@ Web Select Frame
     Select Frame    ${locator}
 
 Login
-    Open Browser    ${BESUrl}    ${ar_BROWSER}
     Web Input Text    ${txtLoginId}    bmcbes
     Web Input Text    ${txtPassword}    bmcbes
     Web Click Element    ${btnLogin}
     Web Click Element    ${btnConfirmHospital}
     Web Select Frame    ${frameHead}
     Wait Until Element Is Visible    ${lblPt.Registration}    10
-    Close Browser
+    Capture Page Screenshot
+
+Web Open BES
+    Open Browser    ${BESUrl}    ${ar_BROWSER}
+    Maximize Browser Window
+    Capture Page Screenshot

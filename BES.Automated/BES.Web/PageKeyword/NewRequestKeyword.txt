@@ -1,0 +1,11 @@
+*** Settings ***
+Resource          CommonKeyword.txt
+Resource          ../PageRepositories/NewRequestRepository.txt
+
+*** Keywords ***
+Go To New Request
+    Web Click Element    ${lblNewRequest}
+    Unselect Frame
+    Web Select Frame    ${frameMain}
+    Wait Until Element Is Visible    ${lblPatientDetail}    10
+    Capture Page Screenshot

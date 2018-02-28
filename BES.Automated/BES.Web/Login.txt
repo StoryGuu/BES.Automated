@@ -10,4 +10,4 @@ Resource          PageKeyword/CommonKeyword.txt
     Web Click Element    ${btnConfirmHospital}
     Web Select Frame    ${frameHead}
     Wait Until Element Is Visible    ${lblPt.Registration}    10
-    Close Browser
+    [Teardown]    Close Browser

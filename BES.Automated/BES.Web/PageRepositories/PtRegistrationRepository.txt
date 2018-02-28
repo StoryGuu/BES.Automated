@@ -1,0 +1,5 @@
+*** Variables ***
+${txtSearchIDCard}    xpath=//*[@id="txtSearchIDCard"]
+${btnSearchPatient}    xpath=//*[@id="btnSearchPatient"]
+${tableSearchPatientResult}    xpath=//*[@id="listResultPatient"]/table/tbody/tr[2]
+${lblPtRegistion}    xpath=//*[@id="headMenu01"]

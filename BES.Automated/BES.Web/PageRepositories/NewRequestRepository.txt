@@ -1,0 +1,6 @@
+*** Variables ***
+${btnSAVE}        xpath=//*[@id="btnSaveEvent"]
+${btnSearchPt}    xpath=//*[@id="btnStartSearchPatient"]
+${txtIdCard}      xpath=//*[@id="txtIDCard"]
+${lblPatientDetail}    xpath=//*[@id="tblFrmPatientDetail"]/tbody/tr[1]/td
+${tableSearchPtResult}    xpath=//*[@id="resultSearchPatient"]/table/tbody/tr[2]

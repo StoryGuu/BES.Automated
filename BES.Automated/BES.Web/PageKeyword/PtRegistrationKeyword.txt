@@ -1,0 +1,11 @@
+*** Settings ***
+Resource          CommonKeyword.txt
+Resource          ../PageRepositories/PtRegistrationRepository.txt
+
+*** Keywords ***
+Go To PtRegistion
+    Web Click Element    ${lblPtRegistion}
+    Unselect Frame
+    Web Select Frame    ${frameMain}
+    Wait Until Element Is Visible    ${btnSearchPatient}    10
+    Capture Page Screenshot

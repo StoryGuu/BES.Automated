@@ -1,6 +1,29 @@
 *** Settings ***
-Resource          PageKeyword/CommonKeyword.txt
+Resource          PageKeyword/NewRequestKeyword.txt
 
 *** Test Cases ***
-[S-01] Search Patient
+[S-01] Index
+    Web Open BES
     Login
+    Go To New Request
+    [Teardown]    Close Browser
+
+[S-02] Search Pt
+    Web Open BES
+    Login
+    Go To New Request
+    Web Input Text    ${txtIdCard}    123456
+    Web Click Element    ${btnSearchPt}
+    Wait Until Element Is Visible    ${tableSearchPtResult}
+    Capture Page Screenshot
+    [Teardown]    Close Browser
+
+[S-03] Save New Request
+    Web Open BES
+    Login
+    Go To New Request
+    Web Click Element    ${btnSAVE}
+    Alert Should Be Present    ยืนยันการบันทึกข้อมูล    action=ACCEPT    timeout=10
+    Alert Should Be Present    บันทึกข้อมูลเรียบร้อย    action=ACCEPT    timeout=10
+    Capture Page Screenshot
+    [Teardown]    Close Browser
